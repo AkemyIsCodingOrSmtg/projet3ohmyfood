@@ -1,0 +1,30 @@
+footer {
+    color: white;
+    background-color: $darkergrey-color;
+    padding-block: 25px;
+    padding-inline: 20px;
+}
+
+.footer-title {
+    font-family: 'Shrikhand';
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.footer-list {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-text {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.footer-icon {
+    padding-right: 5px;
+}
+
+.fa-utensils {
+    margin-right: 6px;
+}

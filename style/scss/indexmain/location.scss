@@ -1,0 +1,17 @@
+.location {
+    display: flex;
+    justify-content: center;
+    background-color: $lightgrey-color;
+    box-shadow: $thin-shadow;
+    padding-block: 15px;
+}
+
+.location-icon {
+    position: absolute;
+    color: $darkgrey-color;
+    padding-right: 150px;
+}
+
+.location-text {
+    color: $darkgrey-color;
+}
