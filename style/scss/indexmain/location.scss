@@ -1,17 +1,20 @@
+@use '../base/color.scss';
+@use '../base/shadow.scss';
+
 .location {
     display: flex;
     justify-content: center;
-    background-color: $lightgrey-color;
-    box-shadow: $thin-shadow;
+    background-color: color.$lightgrey-color;
+    box-shadow: shadow.$thin-shadow;
     padding-block: 15px;
-}
 
-.location-icon {
-    position: absolute;
-    color: $darkgrey-color;
-    padding-right: 150px;
-}
-
-.location-text {
-    color: $darkgrey-color;
+    .location-icon {
+        position: absolute;
+        color: color.$darkgrey-color;
+        padding-right: 150px;
+    }
+    
+    .location-text {
+        color: color.$darkgrey-color;
+    }
 }

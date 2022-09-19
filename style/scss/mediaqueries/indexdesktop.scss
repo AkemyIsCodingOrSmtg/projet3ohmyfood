@@ -1,0 +1,34 @@
+@media screen and (min-width: 993px) {
+    
+    .function {
+        padding-inline: 70px;
+    }
+
+    .restaurants {
+        padding-inline: 65px;
+
+        .restaurants-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .restaurants-card {
+                width: 49%;
+                margin-bottom: 40px;
+
+                .restaurants-card-new-1 {
+                    right: unset;
+                    left: 615px;
+                }
+
+                .restaurants-card-new-2 {
+                    right: 85px;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding-inline: 70px;
+    }
+}

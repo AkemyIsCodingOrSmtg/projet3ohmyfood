@@ -1,25 +1,301 @@
-/*******************
-V A R I A B L E S
-*******************/
-/*colors*/
-/*shadows*/
-/*Text*/
-body {
-  background-color: black;
+h1 {
+  margin: 0;
 }
 
-/*******************
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo {
+  width: 160px;
+  margin-top: 10px;
+  padding-block: 10px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+  box-shadow: inset 0 12px 3px -10px #CFCFCF;
+  padding-block: 15px;
+}
+.location .location-icon {
+  position: absolute;
+  color: #4D4D4D;
+  padding-right: 150px;
+}
+.location .location-text {
+  color: #4D4D4D;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 20px;
+  padding-top: 35px;
+}
+.explore .explore-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.explore .explore-text {
+  text-align: center;
+  color: #7E7E7E;
+  padding-bottom: 35px;
+}
+.explore .explore-button {
+  width: 215px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: white;
+  box-shadow: 0 5px 5px 0px #CFCFCF;
+  transition: 200ms;
+  margin-bottom: 35px;
+  padding: 17px;
+}
+.explore .explore-button:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 5px 10px -2px #4D4D4D;
+}
+
+.function {
+  margin-block: 35px;
+  padding-inline: 15px;
+}
+.function .function-title {
+  padding-bottom: 20px;
+}
+.function .function-list {
+  counter-reset: function-list-counter 0;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+}
+.function .function-list .function-card {
+  display: flex;
+  align-items: center;
+  counter-increment: function-list-counter;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 0 6px 8px 0 #EAEAEA;
+  margin-inline: 5px;
+  margin-bottom: 20px;
+  padding-block: 25px;
+}
+.function .function-list .function-card:before {
+  content: counter(function-list-counter);
+  position: absolute;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  margin: -10px;
+  padding-inline: 6px;
+  padding-top: 3px;
+}
+.function .function-list .function-card .function-icon {
+  font-size: large;
+  color: #7E7E7E;
+  margin-inline: 30px;
+}
+.function .function-list .function-card-highlight {
+  background-color: #F5EDFF;
+}
+.function .function-list .function-card-highlight .function-icon-highlight {
+  color: #9356DC;
+}
+
+.restaurants {
+  margin-block: 35px;
+  padding-inline: 15px;
+}
+.restaurants .restaurants-title {
+  padding-bottom: 20px;
+}
+.restaurants .restaurants-card {
+  height: 240px;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px 0px #CFCFCF;
+  transition: 200ms;
+  margin-bottom: 20px;
+}
+.restaurants .restaurants-card:hover {
+  box-shadow: 0 5px 10px -2px #4D4D4D;
+}
+.restaurants .restaurants-card .restaurants-card-image {
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+.restaurants .restaurants-card .restaurants-card-new-1 {
+  position: absolute;
+  right: 25px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #008766;
+  background-color: #99E2D0;
+  margin-top: -160px;
+  padding-block: 5px;
+  padding-inline: 10px;
+}
+.restaurants .restaurants-card .restaurants-card-new-2 {
+  position: absolute;
+  right: 25px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #008766;
+  background-color: #99E2D0;
+  margin-top: -160px;
+  padding-block: 5px;
+  padding-inline: 10px;
+}
+.restaurants .restaurants-card .restaurants-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.restaurants .restaurants-card .restaurants-card-bottom .restaurants-card-description .restaurants-card-title {
+  padding-bottom: 5px;
+}
+.restaurants .restaurants-card .restaurants-card-bottom .restaurants-card-heart {
+  font-size: 25px;
+}
+.restaurants .restaurants-card .restaurants-card-bottom .restaurants-card-heart:hover {
+  color: transparent;
+}
+.restaurants .restaurants-card .restaurants-card-bottom .restaurants-card-heart-full {
+  font-size: 25px;
+  position: absolute;
+  right: 35px;
+  color: transparent;
+  transition: 200ms;
+}
+.restaurants .restaurants-card .restaurants-card-bottom .restaurants-card-heart-full:hover {
+  background: linear-gradient(180deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.2);
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+  padding-block: 25px;
+  padding-inline: 20px;
+}
+footer .footer-title {
+  font-family: "Shrikhand";
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+footer .footer-list {
+  margin: 0;
+  padding: 0;
+}
+footer .footer-list .footer-text {
+  display: flex;
+  padding-bottom: 8px;
+}
+footer .footer-list .footer-text .footer-icon {
+  padding-right: 5px;
+}
+footer .footer-list .footer-text .fa-utensils {
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 993px) {
+  .function {
+    padding-inline: 70px;
+  }
+  .restaurants {
+    padding-inline: 65px;
+  }
+  .restaurants .restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurants .restaurants-list .restaurants-card {
+    width: 49%;
+    margin-bottom: 40px;
+  }
+  .restaurants .restaurants-list .restaurants-card .restaurants-card-new-1 {
+    right: unset;
+    left: 615px;
+  }
+  .restaurants .restaurants-list .restaurants-card .restaurants-card-new-2 {
+    right: 85px;
+  }
+  footer {
+    padding-inline: 70px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .function {
+    padding-inline: 60px;
+  }
+  .restaurants {
+    padding-inline: 60px;
+  }
+  footer {
+    padding-inline: 60px;
+  }
+}
+/************************
+B A S E
+*************************/
+/*Text*/
+/*Body*/
+/************************
 H E A D E R
-*******************/
-/*******************
+*************************/
+/************************
 M A I N
-*******************/
+*************************/
 /*** L O C A T I O N ***/
 /*** E X P L O R E ***/
 /*** F U N C T I O N ***/
 /*** R E S T A U R A N T S ***/
-/*******************
+/************************
 F O O T E R
-*******************/
+*************************/
+/************************
+M E D I A Q U E R I E S
+*************************/
+/*** D E S K T O P ***/
+/*** T A B L E T ***/
 
 /*# sourceMappingURL=indexstyle.css.map */
