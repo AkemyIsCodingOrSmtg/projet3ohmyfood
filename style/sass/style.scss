@@ -1,0 +1,14 @@
+/*** B A S E ***/
+/*Reset*/
+@use './base/_reset.scss';
+/*Typography*/
+@use './base/_typography.scss';
+
+/*** I N D E X ***/
+@use './pages/_index.scss';
+
+/*** M E N U ***/
+@use './pages/_menu.scss';
+
+/*** F O O T E R ***/
+@use './layout/_footer.scss';

@@ -1,0 +1,15 @@
+@use '../utilities/_variables.scss';
+
+.location {
+    display: flex;
+    justify-content: center;
+    color: variables.$darkgrey-color;
+    background-color: variables.$lightgrey-color;
+    box-shadow: variables.$thin-shadow;
+    padding-block: 15px;
+
+    .location-icon {
+        position: absolute;
+        padding-right: 150px;
+    }
+}

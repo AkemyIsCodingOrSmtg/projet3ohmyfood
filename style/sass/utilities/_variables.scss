@@ -1,3 +1,4 @@
+/*Colors*/
 $darkergrey-color: #353535;
 $darkgrey-color: #4D4D4D;
 $grey-color: #7E7E7E;
@@ -9,3 +10,8 @@ $lightpurple-color: #F5EDFF;
 $pink-color: #FF79DA;
 $green-color: #99E2D0;
 $darkgreen-color: #008766;
+
+/*Shadows*/
+$thin-shadow: inset 0 12px 3px -10px $shadowgrey-color;
+$button-shadow: 0 5px 5px 0px $shadowgrey-color;
+$activebutton-shadow: 0 5px 10px -2px $darkgrey-color;

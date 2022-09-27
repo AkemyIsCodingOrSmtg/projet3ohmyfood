@@ -1,0 +1,16 @@
+@use '../utilities/_variables.scss';
+
+.button {
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(170deg, variables.$pink-color, variables.$purple-color);
+    box-shadow: variables.$button-shadow;
+    transition: 200ms;
+    padding: 17px 25px;
+
+    &:hover, &:active {
+        filter: brightness(1.2);
+        box-shadow: variables.$activebutton-shadow;
+    }
+}

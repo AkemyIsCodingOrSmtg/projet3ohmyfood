@@ -1,0 +1,20 @@
+@use '../utilities/_variables.scss';
+@use '../components/_buttons.scss';
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: variables.$lightergrey-color;
+    padding: 35px 20px;
+
+    .explore-title {
+        padding-bottom: 10px;
+    }
+
+    .explore-text {
+        color: variables.$grey-color;
+        padding-bottom: 35px;
+    }
+}

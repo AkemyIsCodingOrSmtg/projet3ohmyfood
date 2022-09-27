@@ -1,10 +1,18 @@
-@use '../base/color.scss';
+@use '../utilities/_variables.scss';
 
 footer {
     color: white;
-    background-color: color.$darkergrey-color;
+    background-color: variables.$darkergrey-color;
     padding-block: 25px;
     padding-inline: 20px;
+    
+    @media screen and (min-width: 993px) {
+        padding-inline: 50px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        padding-inline: 25px;
+    }
 
     .footer-title {
         font-family: 'Shrikhand';
@@ -29,5 +37,4 @@ footer {
             }
         }
     }
-    //mixing keyframe
 }

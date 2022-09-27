@@ -1,11 +1,10 @@
-header {
+.header-index {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
 
     .logo {
         width: 160px;
-        margin-top: 10px;
-        padding-block: 10px;
     }
 }

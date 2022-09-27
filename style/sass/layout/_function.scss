@@ -1,0 +1,28 @@
+@use '../utilities/_variables.scss';
+@use '../components/_card.scss';
+
+.function {
+    margin: 35px 15px;
+
+    .function-title {
+        padding-bottom: 20px;
+    }
+
+    @media screen and (min-width: 993px) {
+        margin-inline: 50px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        margin-inline: 25px;
+    }
+    
+    .function-grid {
+        margin-left: 10px;
+
+        @media screen and (min-width: 993px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5%;
+        }
+    }
+}

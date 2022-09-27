@@ -1,0 +1,12 @@
+/**** H E A D E R ***/
+@use '../layout/_header';
+
+/*** M A I N ***/
+/*location*/
+@use '../layout/_location.scss';
+/*explore*/
+@use '../layout/_explore.scss';
+/*function*/
+@use '../layout/_function.scss';
+/*restaurants*/
+@use '../layout/_restaurants.scss';
