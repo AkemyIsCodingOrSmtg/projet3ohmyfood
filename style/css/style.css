@@ -11,6 +11,10 @@ html, body, div, span, applet, object, iframe, figure, h1, h2, h3, h4, h5, h6, p
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
 }
+html a, html a:visited, html a:hover, html a:active, body a, body a:visited, body a:hover, body a:active, div a, div a:visited, div a:hover, div a:active, span a, span a:visited, span a:hover, span a:active, applet a, applet a:visited, applet a:hover, applet a:active, object a, object a:visited, object a:hover, object a:active, iframe a, iframe a:visited, iframe a:hover, iframe a:active, figure a, figure a:visited, figure a:hover, figure a:active, h1 a, h1 a:visited, h1 a:hover, h1 a:active, h2 a, h2 a:visited, h2 a:hover, h2 a:active, h3 a, h3 a:visited, h3 a:hover, h3 a:active, h4 a, h4 a:visited, h4 a:hover, h4 a:active, h5 a, h5 a:visited, h5 a:hover, h5 a:active, h6 a, h6 a:visited, h6 a:hover, h6 a:active, p a, p a:visited, p a:hover, p a:active, blockquote a, blockquote a:visited, blockquote a:hover, blockquote a:active, pre a, pre a:visited, pre a:hover, pre a:active, a a, a a:visited, a a:hover, a a:active, abbr a, abbr a:visited, abbr a:hover, abbr a:active, acronym a, acronym a:visited, acronym a:hover, acronym a:active, address a, address a:visited, address a:hover, address a:active, big a, big a:visited, big a:hover, big a:active, cite a, cite a:visited, cite a:hover, cite a:active, code a, code a:visited, code a:hover, code a:active, del a, del a:visited, del a:hover, del a:active, dfn a, dfn a:visited, dfn a:hover, dfn a:active, em a, em a:visited, em a:hover, em a:active, img a, img a:visited, img a:hover, img a:active, ins a, ins a:visited, ins a:hover, ins a:active, kbd a, kbd a:visited, kbd a:hover, kbd a:active, q a, q a:visited, q a:hover, q a:active, s a, s a:visited, s a:hover, s a:active, samp a, samp a:visited, samp a:hover, samp a:active, small a, small a:visited, small a:hover, small a:active, strike a, strike a:visited, strike a:hover, strike a:active, strong a, strong a:visited, strong a:hover, strong a:active, sub a, sub a:visited, sub a:hover, sub a:active, sup a, sup a:visited, sup a:hover, sup a:active, tt a, tt a:visited, tt a:hover, tt a:active, var a, var a:visited, var a:hover, var a:active, b a, b a:visited, b a:hover, b a:active, u a, u a:visited, u a:hover, u a:active, i a, i a:visited, i a:hover, i a:active, center a, center a:visited, center a:hover, center a:active, dl a, dl a:visited, dl a:hover, dl a:active, dt a, dt a:visited, dt a:hover, dt a:active, dd a, dd a:visited, dd a:hover, dd a:active, ol a, ol a:visited, ol a:hover, ol a:active, ul a, ul a:visited, ul a:hover, ul a:active, li a, li a:visited, li a:hover, li a:active, fieldset a, fieldset a:visited, fieldset a:hover, fieldset a:active, form a, form a:visited, form a:hover, form a:active, label a, label a:visited, label a:hover, label a:active, legend a, legend a:visited, legend a:hover, legend a:active, table a, table a:visited, table a:hover, table a:active, caption a, caption a:visited, caption a:hover, caption a:active, tbody a, tbody a:visited, tbody a:hover, tbody a:active, tfoot a, tfoot a:visited, tfoot a:hover, tfoot a:active, thead a, thead a:visited, thead a:hover, thead a:active, tr a, tr a:visited, tr a:hover, tr a:active, th a, th a:visited, th a:hover, th a:active, td a, td a:visited, td a:hover, td a:active, article a, article a:visited, article a:hover, article a:active, aside a, aside a:visited, aside a:hover, aside a:active, main a, main a:visited, main a:hover, main a:active, canvas a, canvas a:visited, canvas a:hover, canvas a:active, details a, details a:visited, details a:hover, details a:active, embed a, embed a:visited, embed a:hover, embed a:active, figcaption a, figcaption a:visited, figcaption a:hover, figcaption a:active, footer a, footer a:visited, footer a:hover, footer a:active, header a, header a:visited, header a:hover, header a:active, hgroup a, hgroup a:visited, hgroup a:hover, hgroup a:active, menu a, menu a:visited, menu a:hover, menu a:active, nav a, nav a:visited, nav a:hover, nav a:active, output a, output a:visited, output a:hover, output a:active, ruby a, ruby a:visited, ruby a:hover, ruby a:active, section a, section a:visited, section a:hover, section a:active, summary a, summary a:visited, summary a:hover, summary a:active, time a, time a:visited, time a:hover, time a:active, mark a, mark a:visited, mark a:hover, mark a:active, audio a, audio a:visited, audio a:hover, audio a:active, video a, video a:visited, video a:hover, video a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
 footer, header, nav, section, main {
   display: block;
@@ -46,18 +50,131 @@ body {
   font-family: "Roboto";
 }
 
-.header-index {
+.header {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 15px;
   margin-bottom: 10px;
 }
-.header-index .logo {
+.header nav {
+  position: absolute;
+  font-size: 20px;
+  left: 20px;
+}
+.header .logo {
   width: 160px;
 }
 
 /*Colors*/
 /*Shadows*/
+footer {
+  color: white;
+  background-color: #353535;
+  padding-block: 25px;
+  padding-inline: 20px;
+}
+@media screen and (min-width: 993px) {
+  footer {
+    padding-inline: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer {
+    padding-inline: 25px;
+  }
+}
+footer .footer-title {
+  font-family: "Shrikhand";
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+footer .footer-list {
+  margin: 0;
+  padding: 0;
+}
+footer .footer-list .footer-text {
+  display: flex;
+  padding-bottom: 8px;
+}
+footer .footer-list .footer-text .footer-icon {
+  padding-right: 5px;
+}
+footer .footer-list .footer-text .fa-utensils {
+  margin-right: 6px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  animation: fadeout 1s 0.3s forwards;
+  pointer-events: none;
+}
+.loader .spinner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top: 10px solid #FF79DA;
+  border-left: 10px solid #FF79DA;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  animation: rotation-back 1s linear infinite;
+}
+.loader .spinner-small {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 15px solid transparent;
+  border-top: 15px solid #9356DC;
+  border-right: 15px solid #9356DC;
+  border-bottom: 15px solid #9356DC;
+  border-radius: 50%;
+  animation: rotation 0.5s linear infinite;
+}
+.loader .spinner-big {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 5px solid transparent;
+  border-top: 5px solid #99E2D0;
+  border-right: 5px solid #99E2D0;
+  border-bottom: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: rotation 1.5s linear infinite;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -71,6 +188,7 @@ body {
   padding-right: 150px;
 }
 
+/*button*/
 .button {
   border: none;
   border-radius: 30px;
@@ -79,10 +197,29 @@ body {
   box-shadow: 0 5px 5px 0px #CFCFCF;
   transition: 200ms;
   padding: 17px 25px;
+  cursor: pointer;
 }
 .button:hover, .button:active {
   filter: brightness(1.2);
   box-shadow: 0 5px 10px -2px #4D4D4D;
+}
+
+/*hearts*/
+.empty-heart {
+  font-size: 25px;
+}
+
+.full-heart {
+  position: absolute;
+  font-size: 25px;
+  color: transparent;
+  transition: 200ms;
+}
+.full-heart:hover {
+  background: linear-gradient(180deg, #9356DC, #FF79DA);
+  background-clip: text;
+  transform: scale(1.2);
+  -webkit-background-clip: text;
 }
 
 .explore {
@@ -91,7 +228,7 @@ body {
   align-items: center;
   text-align: center;
   background-color: #F6F6F6;
-  padding: 35px 20px;
+  padding: 50px 20px;
 }
 .explore .explore-title {
   padding-bottom: 10px;
@@ -142,7 +279,8 @@ body {
 
 /*** R E S T A U R A N T S * C A R D ***/
 .restaurants-card {
-  height: 240px;
+  display: flex;
+  flex-direction: column;
   border-radius: 15px;
   box-shadow: 0 5px 5px 0px #CFCFCF;
   transition: 200ms;
@@ -153,24 +291,23 @@ body {
 }
 @media screen and (min-width: 993px) {
   .restaurants-card {
-    height: 300px;
     margin: 0;
   }
 }
 .restaurants-card .restaurants-card-image {
-  height: 70%;
+  height: 170px;
   width: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 @media screen and (min-width: 993px) {
   .restaurants-card .restaurants-card-image {
-    height: 78%;
+    height: 235px;
   }
 }
 .restaurants-card .restaurants-card-new {
   position: absolute;
-  right: 35px;
+  right: 30px;
   border-radius: 3px;
   font-size: 15px;
   font-weight: 500;
@@ -179,16 +316,21 @@ body {
   margin-top: -160px;
   padding: 5px 10px;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants-card .restaurants-card-new {
+    right: 40px;
+  }
+}
 @media screen and (min-width: 993px) {
   .restaurants-card .restaurants-card-new {
-    margin-top: -220px;
-    right: 51.7%;
+    right: 70px;
+    margin-top: -225px;
   }
 }
 @media screen and (min-width: 993px) {
   .restaurants-card .new-left {
-    margin-top: -220px;
-    right: 70px;
+    right: 50%;
+    margin-right: 35px;
   }
 }
 .restaurants-card .restaurants-card-bottom {
@@ -200,43 +342,63 @@ body {
 .restaurants-card .restaurants-card-bottom .restaurants-card-description .restaurants-card-title {
   padding-bottom: 5px;
 }
-.restaurants-card .restaurants-card-bottom .restaurants-card-heart {
-  font-size: 25px;
-}
-.restaurants-card .restaurants-card-bottom .restaurants-card-heart-full {
-  font-size: 25px;
-  position: absolute;
+.restaurants-card .restaurants-card-bottom .full-heart {
   right: 30px;
-  color: transparent;
-  transition: 200ms;
-}
-.restaurants-card .restaurants-card-bottom .restaurants-card-heart-full:hover {
-  background: linear-gradient(180deg, #9356DC, #FF79DA);
-  background-clip: text;
-  transform: scale(1.3);
-  -webkit-background-clip: text;
-}
-.restaurants-card .restaurants-card-bottom .restaurants-card-heart-full:hover ~ .restaurants-card-heart {
-  color: transparent;
 }
 @media screen and (min-width: 993px) {
-  .restaurants-card .restaurants-card-bottom .restaurants-card-heart-full {
-    right: 70px;
+  .restaurants-card .restaurants-card-bottom .full-heart {
+    right: 65px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .restaurants-card .restaurants-card-bottom .restaurants-card-heart-full {
-    right: 39.8px;
+  .restaurants-card .restaurants-card-bottom .full-heart {
+    right: 40px;
   }
 }
 @media screen and (min-width: 993px) {
-  .restaurants-card .restaurants-card-bottom .heart-full-left {
+  .restaurants-card .restaurants-card-bottom .full-heart-left {
     right: 50%;
+    margin-right: 30px;
   }
 }
 
+/*** M E N U * C A R D ***/
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 5px 5px 0px #CFCFCF;
+  margin-bottom: 15px;
+  padding: 15px;
+  gap: 10px;
+}
+.menu-card .menu-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  gap: 10px;
+}
+.menu-card .menu-card-description .menu-card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-card .menu-card-description .menu-card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-card .menu-card-price {
+  display: flex;
+  align-items: flex-end;
+}
+.menu-card .menu-card-selection {
+  position: absolute;
+}
+
 .function {
-  margin: 35px 15px;
+  margin: 50px 15px;
 }
 .function .function-title {
   padding-bottom: 20px;
@@ -262,75 +424,122 @@ body {
   }
 }
 
-.restaurants {
-  margin: 35px 15px;
+#restaurants {
+  padding: 50px 15px;
+  background-color: #F6F6F6;
 }
 @media screen and (min-width: 993px) {
-  .restaurants {
-    margin-inline: 50px;
+  #restaurants {
+    padding-inline: 50px;
   }
-  .restaurants .restaurants-grid {
+  #restaurants .restaurants-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .restaurants {
-    margin-inline: 25px;
+  #restaurants {
+    padding-inline: 25px;
   }
 }
-.restaurants .restaurants-title {
+#restaurants .restaurants-title {
   padding-bottom: 20px;
 }
 
-/**** H E A D E R ***/
-/*** M A I N ***/
+/*** I N D E X ***/
+/*loader*/
 /*location*/
 /*explore*/
 /*function*/
 /*restaurants*/
-footer {
-  color: white;
-  background-color: #353535;
-  padding-block: 25px;
-  padding-inline: 20px;
+.menu-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 @media screen and (min-width: 993px) {
-  footer {
+  .menu-image {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu-image {
+    height: 450px;
+  }
+}
+
+.menu {
+  position: relative;
+  border-radius: 50px 50px 0 0;
+  background-color: #F6F6F6;
+  margin-top: -50px;
+  padding-block: 40px;
+  padding-inline: 15px;
+}
+@media screen and (min-width: 993px) {
+  .menu {
     padding-inline: 50px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  footer {
+  .menu {
     padding-inline: 25px;
   }
 }
-footer .footer-title {
+.menu .menu-title {
   font-family: "Shrikhand";
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-footer .footer-list {
-  margin: 0;
-  padding: 0;
-}
-footer .footer-list .footer-text {
   display: flex;
-  padding-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-inline: 10px;
 }
-footer .footer-list .footer-text .footer-icon {
-  padding-right: 5px;
+.menu .menu-title .full-heart {
+  right: 25px;
 }
-footer .footer-list .footer-text .fa-utensils {
-  margin-right: 6px;
+@media screen and (min-width: 993px) {
+  .menu .menu-title .full-heart {
+    right: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu .menu-title .full-heart {
+    right: 35px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .menu .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+.menu .menu-grid .menu-section {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-grid .menu-section .menu-section-title {
+  width: 40px;
+  border-bottom: 2px solid #99E2D0;
+  margin-left: 7px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.menu .button-position {
+  display: flex;
+  justify-content: center;
+  padding-block: 30px;
 }
 
+/*** M E N U ***/
+/*menu image*/
 /*** B A S E ***/
 /*Reset*/
 /*Typography*/
+/*Header*/
+/*Footer*/
 /*** I N D E X ***/
-/*** M E N U ***/
-/*** F O O T E R ***/
+/*Menu*/
 
 /*# sourceMappingURL=style.css.map */

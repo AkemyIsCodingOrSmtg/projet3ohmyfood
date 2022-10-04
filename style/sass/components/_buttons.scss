@@ -1,5 +1,6 @@
 @use '../utilities/_variables.scss';
 
+/*button*/
 .button {
     border: none;
     border-radius: 30px;
@@ -8,9 +9,29 @@
     box-shadow: variables.$button-shadow;
     transition: 200ms;
     padding: 17px 25px;
+    cursor: pointer;
 
     &:hover, &:active {
         filter: brightness(1.2);
         box-shadow: variables.$activebutton-shadow;
+    }
+}
+
+/*hearts*/
+.empty-heart {
+    font-size: 25px;
+}
+
+.full-heart  {
+    position: absolute;
+    font-size: 25px;
+    color: transparent;
+    transition: 200ms;
+
+    &:hover {
+        background: linear-gradient(180deg, variables.$purple-color, variables.$pink-color);
+        background-clip: text;
+        transform: scale(1.2);
+        -webkit-background-clip: text;
     }
 }

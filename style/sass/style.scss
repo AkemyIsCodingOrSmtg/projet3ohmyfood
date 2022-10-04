@@ -3,12 +3,12 @@
 @use './base/_reset.scss';
 /*Typography*/
 @use './base/_typography.scss';
+/*Header*/
+@use './layout/_header';
+/*Footer*/
+@use './layout/_footer.scss';
 
 /*** I N D E X ***/
 @use './pages/_index.scss';
-
-/*** M E N U ***/
+/*Menu*/
 @use './pages/_menu.scss';
-
-/*** F O O T E R ***/
-@use './layout/_footer.scss';

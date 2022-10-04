@@ -1,0 +1,12 @@
+@use './variables';
+
+@mixin spinner($width-height: 1px, $border-size: 1px) {
+    position: absolute;
+    width: $width-height;
+    height: $width-height;
+    border: $border-size solid transparent;
+    border-top: $border-size solid variables.$pink-color;
+    border-left: $border-size solid variables.$pink-color;
+    border-bottom: $border-size solid variables.$pink-color;
+    border-radius: 50%;
+}

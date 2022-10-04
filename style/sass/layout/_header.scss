@@ -1,8 +1,15 @@
-.header-index {
+.header {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 15px;
     margin-bottom: 10px;
+
+    nav {
+        position: absolute;
+        font-size: 20px;
+        left: 20px;
+    }
 
     .logo {
         width: 160px;

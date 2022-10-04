@@ -1,11 +1,12 @@
 @use '../utilities/_variables.scss';
 @use '../components/_card.scss';
 
-.restaurants {
-    margin: 35px 15px;
+#restaurants {
+    padding: 50px 15px;
+    background-color: variables.$lightergrey-color;
     
     @media screen and (min-width: 993px) {
-        margin-inline: 50px;
+        padding-inline: 50px;
 
         .restaurants-grid {
             display: grid;
@@ -15,7 +16,7 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 992px) {
-        margin-inline: 25px;
+        padding-inline: 25px;
     }
 
     .restaurants-title {
