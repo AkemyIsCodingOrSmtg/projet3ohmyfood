@@ -1,4 +1,5 @@
 @use '../utilities/_variables.scss';
+@use '../components/animation';
 @use './_buttons.scss';
 
 /*** F U N C T I O N * C A R D ***/
@@ -136,36 +137,72 @@
 /*** M E N U * C A R D ***/
 .menu-card {
     display: flex;
-    justify-content: space-between;
     border-radius: 15px;
     background-color: white;
+    opacity: 0;
     box-shadow: variables.$button-shadow;
-    margin-bottom: 15px;
-    padding: 15px;
     gap: 10px;
+    animation: slideup 1s forwards;
 
-    .menu-card-description {
+    &:nth-child(2) {
+        animation-delay: calc(2s/5);
+    }
+
+    &:nth-child(3) {
+        animation-delay: calc(3s/5);
+    }
+
+    &:nth-child(4) {
+        animation-delay: calc(4s/5);
+    }
+
+    &:nth-child(5) {
+        animation-delay: calc(5s/5);
+    }
+
+    &:hover .menu-card-selection, &:active .menu-card-selection {
+        opacity: 100%;
+        width: 72px;
+    }
+
+    &:hover .menu-card-selection .menu-card-check, &:active .menu-card-selection .menu-card-check {
+        transform: rotate(0deg);
+    }
+
+    .menu-card-info {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        flex: 1;
         overflow: hidden;
         white-space: nowrap;
         gap: 10px;
+        padding: 15px 0 15px 15px;
 
-        .menu-card-title {
+
+        .menu-card-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: nowrap;
+            gap: 10px;
+            padding-right: 10px;
+
+            .menu-card-title {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .menu-card-text {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
 
-        .menu-card-text {
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .menu-card-price {
+            display: flex;
+            align-items: flex-end;
         }
-    }
-
-    .menu-card-price {
-        display: flex;
-        align-items: flex-end;
     }
 
     .menu-card-selection {
@@ -177,9 +214,13 @@
         background-color: variables.$green-color;
         opacity: 0;
         cursor: pointer;
+        transition: 0.5s;
 
-        .menu-card-check  {
-            
+        .menu-card-check {
+            font-size: 25px;
+            color: white;
+            transform: rotate(180deg);
+            transition: 0.5s;
         }
     }
 }

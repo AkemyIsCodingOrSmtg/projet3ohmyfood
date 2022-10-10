@@ -4,7 +4,7 @@
 .button {
     border: none;
     border-radius: 30px;
-    color: white;
+    color: white!important;
     background: linear-gradient(170deg, variables.$pink-color, variables.$purple-color);
     box-shadow: variables.$button-shadow;
     transition: 200ms;
@@ -28,7 +28,7 @@
     color: transparent;
     transition: 200ms;
 
-    &:hover {
+    &:hover, &:active {
         background: linear-gradient(180deg, variables.$purple-color, variables.$pink-color);
         background-clip: text;
         transform: scale(1.2);
