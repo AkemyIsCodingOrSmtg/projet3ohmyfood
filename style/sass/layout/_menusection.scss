@@ -1,17 +1,17 @@
 @use '../utilities/_variables.scss';
 @use '../components/card';
+@use '../utilities/mixin' as *;
 
 .menu-image {
-    width: 100%;
-    height: 300px;
+    @include dimension (100%, 300px);
     object-fit: cover;
 
     @media screen and (min-width: 993px) {
-        height: 600px;
+        @include dimension (100%, 600px);
     }
     
     @media screen and (min-width: 768px) and (max-width: 992px) {
-        height: 450px;
+        @include dimension (100%, 450px);
     }
 }
 
@@ -32,10 +32,9 @@
     }
 
     .menu-title {
+        @include spaced;
+        @include center-vertical;
         font-family: 'Shrikhand';
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 30px;
         padding-inline: 10px;
 
@@ -54,14 +53,11 @@
 
     .menu-grid {
         @media screen and (min-width: 993px) {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 30px;
+            @include grid-template (3, minmax(0, 1fr), 30px);
         }
 
         .menu-section {
-            display: flex;
-            flex-direction: column;
+            @include column;
             gap: 15px;
             padding-bottom: 30px;
 
@@ -75,8 +71,7 @@
     }
 
     .button-position {
-        display: flex;
-        justify-content: center;
+        @include center-horizontal;
         padding-block: 30px;
     }
 }

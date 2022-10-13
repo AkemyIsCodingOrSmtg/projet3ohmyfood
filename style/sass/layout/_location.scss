@@ -1,8 +1,8 @@
 @use '../utilities/_variables.scss';
+@use '../utilities/mixin' as *;
 
 .location {
-    display: flex;
-    justify-content: center;
+    @include center-horizontal;
     color: variables.$darkgrey-color;
     background-color: variables.$lightgrey-color;
     box-shadow: variables.$thin-shadow;

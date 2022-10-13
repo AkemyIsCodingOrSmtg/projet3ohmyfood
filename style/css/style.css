@@ -10,6 +10,7 @@ html, body, div, span, applet, object, iframe, figure, h1, h2, h3, h4, h5, h6, p
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
+  font-family: "Roboto";
 }
 
 a, a:visited, a:hover, a:active {
@@ -47,10 +48,13 @@ input {
   border-radius: 0;
 }
 
-body {
-  font-family: "Roboto";
-}
-
+/*Colors*/
+/*Shadows*/
+/*Position*/
+/*Grid*/
+/*Dimention*/
+/*Loader rings*/
+/*Child delay*/
 .header {
   display: flex;
   justify-content: center;
@@ -63,12 +67,16 @@ body {
   font-size: 20px;
   left: 20px;
 }
+@media screen and (min-width: 993px) {
+  .header nav {
+    display: none;
+  }
+}
 .header .logo {
   width: 160px;
+  height: auto;
 }
 
-/*Colors*/
-/*Shadows*/
 footer {
   color: white;
   background-color: #353535;
@@ -89,10 +97,6 @@ footer .footer-title {
   font-family: "Shrikhand";
   font-weight: 500;
   padding-bottom: 20px;
-}
-footer .footer-list {
-  margin: 0;
-  padding: 0;
 }
 footer .footer-list .footer-text {
   display: flex;
@@ -171,7 +175,7 @@ footer .footer-list .footer-text .fa-utensils {
   height: 70px;
   border: 15px solid transparent;
   border-top: 15px solid #9356DC;
-  border-right: 15px solid #9356DC;
+  border-left: 15px solid #9356DC;
   border-bottom: 15px solid #9356DC;
   border-radius: 50%;
   animation: rotation 0.5s linear infinite;
@@ -182,7 +186,7 @@ footer .footer-list .footer-text .fa-utensils {
   height: 120px;
   border: 5px solid transparent;
   border-top: 5px solid #99E2D0;
-  border-right: 5px solid #99E2D0;
+  border-left: 5px solid #99E2D0;
   border-bottom: 5px solid #99E2D0;
   border-radius: 50%;
   animation: rotation 1.5s linear infinite;
@@ -237,8 +241,8 @@ footer .footer-list .footer-text .fa-utensils {
 
 .explore {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   text-align: center;
   background-color: #F6F6F6;
   padding: 50px 20px;
@@ -292,8 +296,6 @@ footer .footer-list .footer-text .fa-utensils {
 
 /*** R E S T A U R A N T S * C A R D ***/
 .restaurants-card {
-  display: flex;
-  flex-direction: column;
   border-radius: 15px;
   box-shadow: 0 5px 5px 0px #CFCFCF;
   transition: 200ms;
@@ -308,13 +310,14 @@ footer .footer-list .footer-text .fa-utensils {
   }
 }
 .restaurants-card .restaurants-card-image {
-  height: 170px;
   width: 100%;
+  height: 170px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 @media screen and (min-width: 993px) {
   .restaurants-card .restaurants-card-image {
+    width: 100%;
     height: 235px;
   }
 }
@@ -348,8 +351,9 @@ footer .footer-list .footer-text .fa-utensils {
 }
 .restaurants-card .restaurants-card-bottom {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 10px 15px 10px 20px;
 }
 .restaurants-card .restaurants-card-bottom .restaurants-card-description .restaurants-card-title {
@@ -398,8 +402,9 @@ footer .footer-list .footer-text .fa-utensils {
   animation-delay: 1s;
 }
 .menu-card:hover .menu-card-selection, .menu-card:active .menu-card-selection {
-  opacity: 100%;
   width: 72px;
+  height: auto;
+  opacity: 100%;
 }
 .menu-card:hover .menu-card-selection .menu-card-check, .menu-card:active .menu-card-selection .menu-card-check {
   transform: rotate(0deg);
@@ -515,11 +520,13 @@ footer .footer-list .footer-text .fa-utensils {
 }
 @media screen and (min-width: 993px) {
   .menu-image {
+    width: 100%;
     height: 600px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu-image {
+    width: 100%;
     height: 450px;
   }
 }
@@ -543,10 +550,11 @@ footer .footer-list .footer-text .fa-utensils {
   }
 }
 .menu .menu-title {
-  font-family: "Shrikhand";
   display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
+  font-family: "Shrikhand";
   margin-bottom: 30px;
   padding-inline: 10px;
 }
@@ -592,7 +600,6 @@ footer .footer-list .footer-text .fa-utensils {
 /*menu image*/
 /*** B A S E ***/
 /*Reset*/
-/*Typography*/
 /*Header*/
 /*Footer*/
 /*** I N D E X ***/

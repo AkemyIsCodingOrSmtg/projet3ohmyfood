@@ -1,11 +1,11 @@
 @use '../utilities/_variables.scss';
 @use '../components/animation';
 @use './_buttons.scss';
+@use '../utilities/mixin' as *;
 
 /*** F U N C T I O N * C A R D ***/
 .function-card {
-    display: flex;
-    align-items: center;
+    @include center-vertical;
     counter-increment: function-list-counter;
     border-radius: 20px;
     background-color: variables.$lightergrey-color;
@@ -45,8 +45,6 @@
 
 /*** R E S T A U R A N T S * C A R D ***/
 .restaurants-card {
-    display: flex;
-    flex-direction: column;
     border-radius: 15px;
     box-shadow: variables.$button-shadow;
     transition: 200ms;
@@ -54,7 +52,7 @@
 
     &:hover,
     &:active {
-        box-shadow: variables.$activebutton-shadow;
+        box-shadow: variables.$active-shadow;
     }
 
     @media screen and (min-width: 993px) {
@@ -62,13 +60,12 @@
     }
 
     .restaurants-card-image {
-        height: 170px;
-        width: 100%;
+        @include dimension (100%, 170px);
         border-radius: 15px 15px 0 0;
         object-fit: cover;
 
         @media screen and (min-width: 993px) {
-            height: 235px;
+            @include dimension (100%, 235px);
         }
     }
 
@@ -101,9 +98,8 @@
     }
 
     .restaurants-card-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include center-vertical;
+        @include spaced;
         padding: 10px 15px 10px 20px;
 
         .restaurants-card-description {
@@ -136,6 +132,7 @@
 
 /*** M E N U * C A R D ***/
 .menu-card {
+    @include child-delay;
     display: flex;
     border-radius: 15px;
     background-color: white;
@@ -144,25 +141,9 @@
     gap: 10px;
     animation: slideup 1s forwards;
 
-    &:nth-child(2) {
-        animation-delay: calc(2s/5);
-    }
-
-    &:nth-child(3) {
-        animation-delay: calc(3s/5);
-    }
-
-    &:nth-child(4) {
-        animation-delay: calc(4s/5);
-    }
-
-    &:nth-child(5) {
-        animation-delay: calc(5s/5);
-    }
-
     &:hover .menu-card-selection, &:active .menu-card-selection {
+        @include dimension ($width-number: 72px);
         opacity: 100%;
-        width: 72px;
     }
 
     &:hover .menu-card-selection .menu-card-check, &:active .menu-card-selection .menu-card-check {
@@ -170,8 +151,7 @@
     }
 
     .menu-card-info {
-        display: flex;
-        justify-content: space-between;
+        @include spaced;
         flex: 1;
         overflow: hidden;
         white-space: nowrap;
@@ -200,15 +180,12 @@
         }
 
         .menu-card-price {
-            display: flex;
-            align-items: flex-end;
+            @include flex-end;
         }
     }
 
     .menu-card-selection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-horizontal-vertical;
         width: 0;
         border-radius: 0 15px 15px 0;
         background-color: variables.$green-color;

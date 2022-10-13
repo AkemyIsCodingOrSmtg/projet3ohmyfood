@@ -1,5 +1,6 @@
 @use '../utilities/_variables.scss';
 @use '../components/_card.scss';
+@use '../utilities/mixin' as *;
 
 #restaurants {
     padding: 50px 15px;
@@ -9,9 +10,7 @@
         padding-inline: 50px;
 
         .restaurants-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            @include grid-template (2, 1fr, 30px);
         }
     }
 

@@ -1,12 +1,78 @@
 @use './variables';
 
-@mixin spinner($width-height: 1px, $border-size: 1px) {
+/*Position*/
+@mixin center-horizontal-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+@mixin center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+@mixin spaced { 
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Grid*/
+@mixin grid-template ($repeat-grid, $fraction-grid, $gap-grid) {
+    display: grid;
+    grid-template-columns: repeat($repeat-grid, $fraction-grid);
+    gap: $gap-grid;
+}
+
+/*Dimention*/
+@mixin dimension ($width-number: auto, $height-number: auto) {
+    width: $width-number;
+    height: $height-number;
+}
+
+/*Loader rings*/
+@mixin spinner($width-height, $border-size, $spinner-color, $spin-direction, $spin-speed) {
     position: absolute;
     width: $width-height;
     height: $width-height;
     border: $border-size solid transparent;
-    border-top: $border-size solid variables.$pink-color;
-    border-left: $border-size solid variables.$pink-color;
-    border-bottom: $border-size solid variables.$pink-color;
+    border-top: $border-size solid $spinner-color;
+    border-left: $border-size solid $spinner-color;
+    border-bottom: $border-size solid $spinner-color;
     border-radius: 50%;
+    animation: $spin-direction $spin-speed linear infinite;
+}
+
+/*Child delay*/
+@mixin child-delay {
+    
+    &:nth-child(2) {
+        animation-delay: calc(2s/5);
+    }
+
+    &:nth-child(3) {
+        animation-delay: calc(3s/5);
+    }
+
+    &:nth-child(4) {
+        animation-delay: calc(4s/5);
+    }
+
+    &:nth-child(5) {
+        animation-delay: calc(5s/5);
+    }
 }

@@ -13,7 +13,7 @@
 
     &:hover, &:active {
         filter: brightness(1.2);
-        box-shadow: variables.$activebutton-shadow;
+        box-shadow: variables.$active-shadow;
     }
 }
 

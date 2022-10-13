@@ -1,5 +1,6 @@
 @use '../utilities/_variables.scss';
 @use '../components/_card.scss';
+@use '../utilities/mixin' as *;
 
 .function {
     margin: 50px 15px;
@@ -20,9 +21,7 @@
         margin-left: 10px;
 
         @media screen and (min-width: 993px) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5%;
+            @include grid-template (3, 1fr, 2.5%);
         }
     }
 }

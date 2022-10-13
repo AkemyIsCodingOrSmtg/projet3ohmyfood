@@ -1,10 +1,10 @@
 @use '../utilities/_variables.scss';
 @use '../components/_buttons.scss';
+@use '../utilities/mixin' as *;
 
 .explore {
-    display: flex;
+    @include center-vertical;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     background-color: variables.$lightergrey-color;
     padding: 50px 20px;

@@ -1,7 +1,7 @@
+@use '../utilities/mixin' as *;
+
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-horizontal-vertical;
     margin-top: 15px;
     margin-bottom: 10px;
 
@@ -9,9 +9,13 @@
         position: absolute;
         font-size: 20px;
         left: 20px;
+
+        @media screen and (min-width: 993px) {
+            display: none;
+        }
     }
 
     .logo {
-        width: 160px;
+        @include dimension ($width-number: 160px);
     }
 }

@@ -1,6 +1,6 @@
 @use '../utilities/variables';
 @use '../components/animation';
-@use '../utilities/mixin';
+@use '../utilities/mixin' as *;
 
 .loader {
   width: 100%;
@@ -16,38 +16,14 @@
   pointer-events: none;
 
   .spinner {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 10px solid transparent;
-    border-top: 10px solid variables.$pink-color;
-    border-left: 10px solid variables.$pink-color;
-    border-bottom: 10px solid variables.$pink-color;
-    border-radius: 50%;
-    animation: rotation-back 1s linear infinite;
+    @include spinner(100px, 10px, variables.$pink-color, rotation-back, 1s);
   }
 
   .spinner-small {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border: 15px solid transparent;
-    border-top: 15px solid variables.$purple-color;
-    border-right: 15px solid variables.$purple-color;
-    border-bottom: 15px solid variables.$purple-color;
-    border-radius: 50%;
-    animation: rotation 0.5s linear infinite;
+    @include spinner(70px, 15px, variables.$purple-color, rotation, 0.5s);
   }
 
   .spinner-big {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 5px solid transparent;
-    border-top: 5px solid variables.$green-color;
-    border-right: 5px solid variables.$green-color;
-    border-bottom: 5px solid variables.$green-color;
-    border-radius: 50%;
-    animation: rotation 1.5s linear infinite;
+    @include spinner(120px, 5px, variables.$green-color, rotation, 1.5s);
   }
 }
