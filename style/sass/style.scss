@@ -1,6 +1,8 @@
 /*** B A S E ***/
 /*Reset*/
 @use './base/_reset.scss';
+/*Typhography*/
+@use './base/_typography.scss';
 /*Header*/
 @use './layout/_header';
 /*Footer*/

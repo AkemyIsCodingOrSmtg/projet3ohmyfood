@@ -10,7 +10,6 @@ html, body, div, span, applet, object, iframe, figure, h1, h2, h3, h4, h5, h6, p
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: none;
-  font-family: "Roboto";
 }
 
 a, a:visited, a:hover, a:active {
@@ -46,6 +45,10 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+body {
+  font-family: "Roboto";
 }
 
 /*Colors*/
@@ -209,7 +212,7 @@ footer .footer-list .footer-text .fa-utensils {
 .button {
   border: none;
   border-radius: 30px;
-  color: white !important;
+  color: white;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 0 5px 5px 0px #CFCFCF;
   transition: 200ms;
@@ -218,6 +221,7 @@ footer .footer-list .footer-text .fa-utensils {
 }
 .button:hover, .button:active {
   filter: brightness(1.2);
+  color: white;
   box-shadow: 0 5px 10px -2px #4D4D4D;
 }
 
@@ -600,6 +604,7 @@ footer .footer-list .footer-text .fa-utensils {
 /*menu image*/
 /*** B A S E ***/
 /*Reset*/
+/*Typhography*/
 /*Header*/
 /*Footer*/
 /*** I N D E X ***/

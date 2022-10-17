@@ -4,7 +4,7 @@
 .button {
     border: none;
     border-radius: 30px;
-    color: white!important;
+    color: white;
     background: linear-gradient(170deg, variables.$pink-color, variables.$purple-color);
     box-shadow: variables.$button-shadow;
     transition: 200ms;
@@ -13,6 +13,7 @@
 
     &:hover, &:active {
         filter: brightness(1.2);
+        color: white;
         box-shadow: variables.$active-shadow;
     }
 }
