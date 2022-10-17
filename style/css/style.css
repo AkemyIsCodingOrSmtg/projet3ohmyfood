@@ -219,7 +219,7 @@ footer .footer-list .footer-text .fa-utensils {
   padding: 17px 25px;
   cursor: pointer;
 }
-.button:hover, .button:active {
+.button:hover, .button:active, .button:visited, .button:hover {
   filter: brightness(1.2);
   color: white;
   box-shadow: 0 5px 10px -2px #4D4D4D;

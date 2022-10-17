@@ -11,7 +11,7 @@
     padding: 17px 25px;
     cursor: pointer;
 
-    &:hover, &:active {
+    &:hover, &:active, &:visited, &:hover {
         filter: brightness(1.2);
         color: white;
         box-shadow: variables.$active-shadow;
